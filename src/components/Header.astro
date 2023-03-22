@@ -1,4 +1,25 @@
 ---
+let menu = [
+  {
+    name: 'about',
+    href: '#',
+  },
+  {
+    name: 'gallery',
+    href: '#',
+  },
+];
 ---
 
-<div class='m-4 text-4xl'><h1>Welcome to the Website</h1></div>
+<div class='flex flex-col md:flex-row justify-between md:w-4/5'>
+  <h1 class='text-5xl md:text-8xl'>alice_d.ied</h1>
+  <ul class='flex flex-col md:flex-row gap-4 m-4 text-2xl'>
+    {
+      menu.map(({ name, href }) => (
+        <li class='self-start p-1 hover:bg-myYellow hover:text-black transition ease-in-out delay-100'>
+          <a href={href}>{name}</a>
+        </li>
+      ))
+    }
+  </ul>
+</div>

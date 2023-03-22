@@ -7,6 +7,9 @@ module.exports = {
         saira: ['"Saira Extra Condensed"'],
         sono: ['Sono'],
       },
+      colors: {
+        myYellow: '#b1b70d',
+      },
     },
   },
   plugins: [],

@@ -14,4 +14,27 @@ export const PICTURES = [
     width: 2848,
     height: 4096,
   },
+  {
+    src: '/pics/image00004.jpeg',
+    width: 2160,
+    height: 1620,
+  },
+  {
+    src: '/pics/image00005.jpeg',
+  },
+  {
+    src: '/pics/image00006.jpeg',
+  },
+  {
+    src: '/pics/image00007.jpeg',
+  },
+  {
+    src: '/pics/image00008.jpeg',
+  },
+  {
+    src: '/pics/image00009.jpeg',
+  },
+  {
+    src: '/pics/image00010.jpeg',
+  },
 ];
