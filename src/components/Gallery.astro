@@ -1,0 +1,58 @@
+---
+import { PICTURES } from '../consts';
+
+export interface Props {
+  gallerypage?: boolean;
+}
+
+const { gallerypage } = Astro.props;
+---
+
+<div
+  class='flex flex-wrap gap-y-8 md:gap-y-16 gap-x-2 justify-center md:justify-between md:w-4/5 mt-4'
+  id='gallery'
+>
+  {
+    gallerypage
+      ? PICTURES.map(({ src, width, height }) => (
+          <div class=''>
+            <a
+              href={src}
+              data-pswp-width={width ? width : 2000}
+              data-pswp-height={height ? height : 2000}
+            >
+              <img
+                class='h-80 object-cover hover:scale-110 transition ease-in-out delay-100'
+                src={src}
+              />
+            </a>
+          </div>
+        ))
+      : PICTURES.slice(-8).map(({ src, width, height }) => (
+          <div class=''>
+            <a
+              href={src}
+              data-pswp-width={width ? width : 2000}
+              data-pswp-height={height ? height : 2000}
+            >
+              <img
+                class='w-60 h-60 object-cover hover:scale-110 transition ease-in-out delay-100 '
+                src={src}
+              />
+            </a>
+          </div>
+        ))
+  }
+</div>
+
+<script>
+  // @ts-ignore
+  import PhotoSwipeLightbox from 'photoswipe/lightbox';
+  import 'photoswipe/style.css';
+  const lightbox = new PhotoSwipeLightbox({
+    gallery: '#gallery',
+    children: 'a',
+    pswpModule: () => import('photoswipe'),
+  });
+  lightbox.init();
+</script>

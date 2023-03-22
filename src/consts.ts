@@ -37,4 +37,33 @@ export const PICTURES = [
   {
     src: '/pics/image00010.jpeg',
   },
+  {
+    src: '/pics/image00011.jpeg',
+  },
+  {
+    src: '/pics/image00012.jpeg',
+  },
+  {
+    src: '/pics/image00013.jpeg',
+  },
+  {
+    src: '/pics/image00014.jpeg',
+  },
+  {
+    src: '/pics/image00015.jpeg',
+  },
+  {
+    src: '/pics/image00016.jpeg',
+  },
+];
+
+export const MENU = [
+  {
+    name: 'about',
+    href: '#',
+  },
+  {
+    name: 'gallery',
+    href: '/gallery',
+  },
 ];

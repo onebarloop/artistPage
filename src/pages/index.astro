@@ -1,8 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
+import Gallery from '../components/Gallery.astro';
 import Footer from '../components/Footer.astro';
-import { PICTURES } from '../consts';
 ---
 
 <Layout>
@@ -23,38 +23,7 @@ import { PICTURES } from '../consts';
         universe of reflection, captured in multi-layered creations.
       </p>
     </div>
-    <div
-      class='flex flex-wrap gap-y-8 md:gap-y-16 gap-x-2 justify-center md:justify-between md:w-4/5'
-      id='gallery'
-    >
-      {
-        PICTURES.map(({ src, width, height }) => (
-          <div class=''>
-            <a
-              href={src}
-              data-pswp-width={width ? width : 2000}
-              data-pswp-height={height ? height : 2000}
-            >
-              <img
-                class='w-60 h-60 object-cover hover:scale-110 transition ease-in-out delay-100 '
-                src={src}
-              />
-            </a>
-          </div>
-        ))
-      }
-    </div>
+    <Gallery />
   </main>
   <Footer />
 </Layout>
-<script>
-  // @ts-ignore
-  import PhotoSwipeLightbox from 'photoswipe/lightbox';
-  import 'photoswipe/style.css';
-  const lightbox = new PhotoSwipeLightbox({
-    gallery: '#gallery',
-    children: 'a',
-    pswpModule: () => import('photoswipe'),
-  });
-  lightbox.init();
-</script>
