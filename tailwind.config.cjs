@@ -10,6 +10,9 @@ module.exports = {
       colors: {
         myYellow: '#b1b70d',
       },
+      screens: {
+        small: '320px',
+      },
     },
   },
   plugins: [],
