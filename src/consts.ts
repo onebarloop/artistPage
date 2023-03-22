@@ -59,6 +59,10 @@ export const PICTURES = [
 
 export const MENU = [
   {
+    name: 'home',
+    href: '/',
+  },
+  {
     name: 'about',
     href: '#',
   },

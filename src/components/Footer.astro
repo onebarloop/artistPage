@@ -1,1 +1,18 @@
-<footer class='h-10 mt-6 bg-myYellow md:w-4/5'></footer>
+---
+import { MENU } from '../consts';
+---
+
+<footer class='mt-6 md:w-4/5'>
+  <div class='h-2 bg-myYellow w-2/3 mx-auto md:mx-0'></div>
+  <ul
+    class='flex m-0 mt-4 mb-4 justify-around md:justify-start md:gap-8 md:pl-0 text-2xl px-3'
+  >
+    {
+      MENU.map(({ name, href }) => (
+        <li class='self-start py-1 text-myYellow '>
+          <a href={href}>{name}</a>
+        </li>
+      ))
+    }
+  </ul>
+</footer>
