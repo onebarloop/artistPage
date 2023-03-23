@@ -13,8 +13,14 @@ describe('Titles are correct in...', () => {
 describe('Testing Links', () => {
   it('Link to gallery works', () => {
     cy.visit('/');
-    const link = cy.get('header a[href="/gallery"]');
-    link.click();
+    const galleryLink = cy.get('header a[href="/gallery"]');
+    galleryLink.click();
     cy.get('title').should('have.text', 'gallery');
+  });
+  it('Link to aboutpage works', () => {
+    cy.visit('/');
+    const aboutLink = cy.get('header a[href="/about"]');
+    aboutLink.click();
+    cy.get('title').should('have.text', 'about');
   });
 });
