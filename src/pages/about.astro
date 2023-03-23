@@ -2,15 +2,15 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import About from '../components/About.astro';
-import Gallery from '../components/Gallery.astro';
 import Footer from '../components/Footer.astro';
 ---
 
-<Layout title='alice_d.ied'>
-  <Header />
-  <main>
+<Layout title='about'>
+  <Header path='/about' />
+  <div class='h-0.5 md:mt-12 mb-6 bg-myYellow w-2/3'></div>
+  <main class='flex flex-wrap md:w-4/5 md:mt-8'>
     <About />
-    <Gallery />
+    <img src='/pics/image00012.jpeg' class='md:w-1/5' />
   </main>
   <Footer />
 </Layout>

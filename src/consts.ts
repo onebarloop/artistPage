@@ -64,7 +64,7 @@ export const MENU = [
   },
   {
     name: 'about',
-    href: '#',
+    href: '/about',
   },
   {
     name: 'gallery',
