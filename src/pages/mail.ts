@@ -34,7 +34,7 @@ export const post: APIRoute = async ({ request }) => {
   if (request.headers.get('Content-Type') === 'application/json') {
     const body = await request.json();
     const text = body.text;
-    mail(text);
+    mail(text).catch(console.error);
     return new Response(
       JSON.stringify({
         message: 'Danke für die Nachricht',
