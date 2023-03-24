@@ -26,7 +26,7 @@ async function mail(name: string, email: string, text: string) {
     html: `<b>${text}</b>`,
   });
 
-  console.log('Message sent: %s', info);
+  return info;
 }
 
 // API-Route
@@ -37,13 +37,23 @@ export const post: APIRoute = async ({ request }) => {
   const text = data.get('text') as string;
 
   if (name && email && text) {
-    mail(name, email, text).catch(console.error);
-    return new Response(
-      JSON.stringify({
-        message: 'Success!',
-      }),
-      { status: 200 }
-    );
+    const resp = await mail(name, email, text).catch(console.error);
+
+    if (resp) {
+      return new Response(
+        JSON.stringify({
+          message: 'Success!',
+        }),
+        { status: 200 }
+      );
+    } else {
+      return new Response(
+        JSON.stringify({
+          message: 'FAIL!',
+        }),
+        { status: 500 }
+      );
+    }
   }
   return new Response(JSON.stringify({ message: 'Missing form field' }), {
     status: 400,
