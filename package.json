@@ -10,12 +10,14 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/preact": "^2.1.0",
     "@astrojs/tailwind": "^3.1.1",
     "@astrojs/vercel": "^3.2.1",
     "@types/nodemailer": "^6.4.7",
     "astro": "^2.1.4",
     "nodemailer": "^6.9.1",
     "photoswipe": "^5.3.6",
+    "preact": "^10.13.1",
     "tailwindcss": "^3.2.7"
   },
   "devDependencies": {
