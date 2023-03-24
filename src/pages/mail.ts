@@ -7,11 +7,7 @@ const mailUser = import.meta.env.EMAIL_USER;
 const mailPass = import.meta.env.EMAIL_PASSWORD;
 
 //Mail-Function
-async function mail(
-  name: FormDataEntryValue,
-  email: FormDataEntryValue,
-  text: FormDataEntryValue
-) {
+async function mail(name: string, email: string, text: string) {
   let transporter = nodemailer.createTransport({
     host: mailHost,
     port: 587,
@@ -24,9 +20,9 @@ async function mail(
 
   let info = await transporter.sendMail({
     from: mailUser,
-    to: 'XXX',
+    to: mailUser,
     subject: `Hello from ${name} // ${email}`,
-    text: text as string,
+    text: text,
     html: `<b>${text}</b>`,
   });
 
@@ -36,9 +32,9 @@ async function mail(
 // API-Route
 export const post: APIRoute = async ({ request }) => {
   const data = await request.formData();
-  const name = data.get('name');
-  const email = data.get('email');
-  const text = data.get('text');
+  const name = data.get('name') as string;
+  const email = data.get('email') as string;
+  const text = data.get('text') as string;
 
   if (name && email && text) {
     mail(name, email, text).catch(console.error);
