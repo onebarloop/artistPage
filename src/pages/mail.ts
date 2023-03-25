@@ -32,9 +32,16 @@ async function mail(name: string, email: string, text: string) {
 // API-Route
 export const post: APIRoute = async ({ request }) => {
   const data = await request.formData();
-  const name = data.get('name') as string;
-  const email = data.get('email') as string;
-  const text = data.get('text') as string;
+  const name = data.get('namekjbvfd') as string;
+  const email = data.get('emailkjnfd') as string;
+  const text = data.get('textgkjfglk') as string;
+  const honeyName = data.get('name') as string;
+  const honeyEmail = data.get('email') as string;
+  const honeyText = data.get('text') as string;
+
+  if (honeyName || honeyEmail || honeyText) {
+    return new Response(null, { status: 500 });
+  }
 
   if (name && email && text) {
     const resp = await mail(name, email, text).catch(console.error);
@@ -42,14 +49,14 @@ export const post: APIRoute = async ({ request }) => {
     if (resp) {
       return new Response(
         JSON.stringify({
-          message: 'Success!',
+          message: 'Thank you for your message ❤️',
         }),
         { status: 200 }
       );
     } else {
       return new Response(
         JSON.stringify({
-          message: 'FAIL!',
+          message: 'something went wrong :(',
         }),
         { status: 500 }
       );

@@ -10,12 +10,12 @@ const { gallerypage } = Astro.props;
 const gallery = gallerypage ? PICTURES : PICTURES.slice(-8);
 ---
 
-<div
+<section
   class='flex flex-wrap gap-y-8 md:gap-y-16 gap-x-2 justify-center md:justify-between md:w-4/5 mt-4'
   id='gallery'
 >
   {
-    gallery.map(({ src, width, height }) => (
+    gallery.map(({ src, width, height, alt }) => (
       <div class=''>
         <a
           href={src}
@@ -25,12 +25,13 @@ const gallery = gallerypage ? PICTURES : PICTURES.slice(-8);
           <img
             class='h-80 object-cover hover:scale-110 transition ease-in-out delay-100'
             src={src}
+            alt={alt ? alt : 'an arty picture'}
           />
         </a>
       </div>
     ))
   }
-</div>
+</section>
 
 <script>
   // @ts-ignore
