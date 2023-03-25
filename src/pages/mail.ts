@@ -66,18 +66,3 @@ export const post: APIRoute = async ({ request }) => {
     status: 400,
   });
 };
-
-/* if (request.headers.get('Content-Type') === 'application/json') {
-  const body = await request.json();
-  const text = body.text;
-  mail(text).catch(console.error);
-  return new Response(
-    JSON.stringify({
-      message: 'Danke für die Nachricht',
-    }),
-    {
-      status: 200,
-    }
-  );
-}
-return new Response(null, { status: 400 }); */

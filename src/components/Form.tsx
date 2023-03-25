@@ -19,7 +19,7 @@ export default function Form() {
     const data = await response.json();
     if (data.message) {
       setResponseMessage(data.message);
-      if (data.message === 'Thank you for your message ❤️') {
+      if (response.ok) {
         setMsgSent(true);
       }
     }
