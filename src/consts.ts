@@ -1,8 +1,16 @@
-export const PICTURES = [
+interface Picture {
+  src: string;
+  width?: number;
+  height?: number;
+  alt?: string;
+}
+
+export const PICTURES: Picture[] = [
   {
     src: '/pics/image00001.jpeg',
     width: 3464,
     height: 3464,
+    alt: 'art!',
   },
   {
     src: '/pics/image00002.jpeg',
