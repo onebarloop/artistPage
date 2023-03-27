@@ -1,5 +1,7 @@
 ---
 import { PICTURES } from '../consts';
+import { Image } from '@astrojs/image/components';
+import test from '../../public/pics/test.jpeg';
 
 export interface Props {
   gallerypage?: boolean;
@@ -19,13 +21,15 @@ const gallery = gallerypage ? PICTURES : PICTURES.slice(-8);
       <div class=''>
         <a
           href={src}
-          data-pswp-width={width ? width : 2000}
-          data-pswp-height={height ? height : 2000}
+          data-pswp-width={width ? width / 2 : 1000}
+          data-pswp-height={height ? height / 2 : 1000}
         >
-          <img
-            class='h-80 object-cover hover:scale-110 transition ease-in-out delay-100'
+          <Image
+            class='object-cover hover:scale-110 transition ease-in-out delay-100'
             src={src}
             alt={alt ? alt : 'an arty picture'}
+            width={width ? width / 4 : 800}
+            height={height ? height / 4 : 800}
           />
         </a>
       </div>
