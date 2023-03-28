@@ -1,5 +1,6 @@
 ---
 import { PICTURES } from '../consts';
+import { Image } from '@astrojs/image/components';
 
 export interface Props {
   gallerypage?: boolean;
@@ -11,21 +12,24 @@ const gallery = gallerypage ? PICTURES : PICTURES.slice(-8);
 ---
 
 <section
-  class='flex flex-wrap gap-y-8 md:gap-y-16 gap-x-2 justify-center md:justify-between md:w-4/5 mt-4'
+  class='flex flex-wrap gap-y-8 md:gap-y-16 gap-x-2 justify-center items-center md:justify-between md:w-4/5 mt-4'
   id='gallery'
 >
   {
     gallery.map(({ src, width, height, alt }) => (
-      <div class=''>
+      <div class='w-80'>
         <a
           href={src}
-          data-pswp-width={width ? width : 2000}
-          data-pswp-height={height ? height : 2000}
+          data-pswp-width={width ? width : 1000}
+          data-pswp-height={height ? height : 1000}
         >
-          <img
-            class='h-80 object-cover hover:scale-110 transition ease-in-out delay-100'
+          <Image
+            class='object-cover hover:scale-110 hover:transition ease-in-out delay-100'
             src={src}
             alt={alt ? alt : 'an arty picture'}
+            width={width ? width / 4 : 800}
+            height={height ? height / 4 : 800}
+            id='test'
           />
         </a>
       </div>

@@ -1,12 +1,12 @@
 import { useState } from 'preact/hooks';
 
 export default function Form() {
-  const [responseMessage, setResponseMessage] = useState('');
-  const [msgSent, setMsgSent] = useState(false);
+  const [responseMessage, setResponseMessage] = useState<string>('');
+  const [msgSent, setMsgSent] = useState<boolean>(false);
 
-  const honeypot = 'opacity-0 absolute top-0 left-0 h-0 w-0 z-0';
+  const honeypot: string = 'opacity-0 absolute top-0 left-0 h-0 w-0 z-0';
 
-  async function handleSubmit(event: Event) {
+  async function handleSubmit(event: Event): Promise<void> {
     console.log(event.target);
     event.preventDefault();
     console.log(event.target);
@@ -36,7 +36,7 @@ export default function Form() {
         id='namekjbvfd'
         name='namekjbvfd'
         required
-        class='bg-black text-myYellow p-2 '
+        class='bg-black text-myYellow p-2'
       />
       <label for='emailkjnfd'>Email</label>
       <input
