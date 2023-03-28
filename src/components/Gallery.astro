@@ -1,6 +1,7 @@
 ---
 import { PICTURES } from '../consts';
 import { Image } from '@astrojs/image/components';
+import { Icon } from 'astro-icon';
 
 export interface Props {
   gallerypage?: boolean;
@@ -23,6 +24,7 @@ const gallery = gallerypage ? PICTURES : PICTURES.slice(-8);
           data-pswp-width={width ? width : 1000}
           data-pswp-height={height ? height : 1000}
         >
+          {/* <Icon name='eos-icons:bubble-loading' class='relative' /> */}
           <Image
             class='object-cover hover:scale-110 transition ease-in-out delay-100'
             src={src}
