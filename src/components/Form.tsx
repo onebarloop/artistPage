@@ -36,7 +36,7 @@ export default function Form() {
         id='namekjbvfd'
         name='namekjbvfd'
         required
-        class='bg-black text-myYellow p-2 '
+        class='bg-black text-myYellow p-2'
       />
       <label for='emailkjnfd'>Email</label>
       <input
