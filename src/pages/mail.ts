@@ -5,6 +5,7 @@ import nodemailer from 'nodemailer';
 const mailHost = import.meta.env.EMAIL_HOST;
 const mailUser = import.meta.env.EMAIL_USER;
 const mailPass = import.meta.env.EMAIL_PASSWORD;
+const mailRecipient = import.meta.env.EMAIL_RECIPIENT;
 
 //Mail-Function
 async function mail(name: string, email: string, text: string) {
@@ -20,7 +21,7 @@ async function mail(name: string, email: string, text: string) {
 
   let info = await transporter.sendMail({
     from: mailUser,
-    to: mailUser,
+    to: mailRecipient,
     subject: `Hello from ${name} // ${email}`,
     text: text,
     html: `<b>${text}</b>`,
