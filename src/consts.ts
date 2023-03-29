@@ -1,67 +1,130 @@
 interface Picture {
   src: string;
-  width?: number;
-  height?: number;
-  alt?: string;
+  width: number;
+  height: number;
+  alt: string;
 }
 
 export const PICTURES: Picture[] = [
   {
-    src: '/pics/image00001.jpeg',
-    width: 3464,
-    height: 3464,
+    src: '/pics/1.JPEG',
+    width: 600,
+    height: 600,
     alt: 'art!',
   },
   {
-    src: '/pics/image00002.jpeg',
-    width: 2828,
-    height: 4096,
+    src: '/pics/2.JPEG',
+    width: 600,
+    height: 600,
+    alt: 'art!',
   },
   {
-    src: '/pics/image00003.jpeg',
-    width: 2848,
-    height: 4096,
+    src: '/pics/3.JPEG',
+    width: 600,
+    height: 600,
+    alt: 'art!',
   },
   {
-    src: '/pics/image00004.jpeg',
-    width: 2160,
-    height: 1620,
+    src: '/pics/4.JPEG',
+    width: 600,
+    height: 600,
+    alt: 'art!',
   },
   {
-    src: '/pics/image00005.jpeg',
+    src: '/pics/5.JPEG',
+    width: 600,
+    height: 600,
+    alt: 'art!',
   },
   {
-    src: '/pics/image00006.jpeg',
+    src: '/pics/6.JPEG',
+    width: 600,
+    height: 600,
+    alt: 'art!',
   },
   {
-    src: '/pics/image00007.jpeg',
+    src: '/pics/7.JPEG',
+    width: 600,
+    height: 600,
+    alt: 'art!',
   },
   {
-    src: '/pics/image00008.jpeg',
+    src: '/pics/8.JPEG',
+    width: 600,
+    height: 600,
+    alt: 'art!',
   },
   {
-    src: '/pics/image00009.jpeg',
+    src: '/pics/9.JPEG',
+    width: 600,
+    height: 600,
+    alt: 'art!',
   },
   {
-    src: '/pics/image00010.jpeg',
+    src: '/pics/10.JPEG',
+    width: 600,
+    height: 600,
+    alt: 'art!',
   },
   {
-    src: '/pics/image00011.jpeg',
+    src: '/pics/11.JPEG',
+    width: 600,
+    height: 600,
+    alt: 'art!',
   },
   {
-    src: '/pics/image00012.jpeg',
+    src: '/pics/12.JPEG',
+    width: 600,
+    height: 600,
+    alt: 'art!',
   },
   {
-    src: '/pics/image00013.jpeg',
+    src: '/pics/13.JPEG',
+    width: 600,
+    height: 600,
+    alt: 'art!',
   },
   {
-    src: '/pics/image00014.jpeg',
+    src: '/pics/14.JPEG',
+    width: 600,
+    height: 600,
+    alt: 'art!',
   },
   {
-    src: '/pics/image00015.jpeg',
+    src: '/pics/15.JPEG',
+    width: 600,
+    height: 600,
+    alt: 'art!',
   },
   {
-    src: '/pics/image00016.jpeg',
+    src: '/pics/16.JPEG',
+    width: 600,
+    height: 600,
+    alt: 'art!',
+  },
+  {
+    src: '/pics/17.JPEG',
+    width: 600,
+    height: 600,
+    alt: 'art!',
+  },
+  {
+    src: '/pics/18.JPEG',
+    width: 600,
+    height: 600,
+    alt: 'art!',
+  },
+  {
+    src: '/pics/19.JPEG',
+    width: 600,
+    height: 600,
+    alt: 'art!',
+  },
+  {
+    src: '/pics/20.JPEG',
+    width: 600,
+    height: 600,
+    alt: 'art!',
   },
 ];
 
