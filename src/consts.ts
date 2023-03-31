@@ -142,3 +142,23 @@ export const MENU = [
     href: '/gallery',
   },
 ];
+
+export const SOCIAL = [
+  {
+    icon: 'mdi:instagram',
+    href: 'https://www.instagram.com/alice_d.ied',
+  },
+  {
+    icon: 'mdi:twitter',
+    href: 'https://twitter.com/alice_d_ied',
+  },
+  {
+    icon: 'mdi:youtube',
+    href: 'https://www.youtube.com/@alice_d',
+  },
+
+  {
+    icon: 'opensea',
+    href: 'https://opensea.io/alice_died',
+  },
+];
