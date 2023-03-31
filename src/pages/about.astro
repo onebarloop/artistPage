@@ -4,15 +4,18 @@ import Header from '../components/Header.astro';
 import About from '../components/About.astro';
 import Footer from '../components/Footer.astro';
 import Form from '../components/Form';
+import { Icon } from 'astro-icon';
 ---
 
 <Layout title='about'>
   <Header path='/about' />
   <div class='h-0.5 md:mt-12 mb-6 bg-myYellow w-2/3'></div>
   <main>
-    <section class='flex flex-wrap md:mt-8 xl:w-4/5'>
+    <section class='flex items-start flex-wrap md:flex-nowrap md:mt-8 xl:w-4/5'>
       <About />
-      <img src='/pics/image00012.jpeg' class='md:w-1/5' />
+      <div class='flex flex-col gap-6'>
+        <img alt='felix' src='/pics/felix.JPEG' class='md:w-60 w-full' />
+      </div>
     </section>
     <section class='flex flex-col-reverse md:flex-row md:gap-16'>
       <Form client:load />
