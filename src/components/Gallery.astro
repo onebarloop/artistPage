@@ -12,12 +12,12 @@ const gallery = gallerypage ? PICTURES : PICTURES.slice(-6);
 ---
 
 <section
-  class='flex flex-wrap gap-y-8 md:gap-y-16 gap-x-2 justify-center items-center md:justify-between md:w-4/5 mt-4'
+  class='flex flex-wrap gap-y-8 md:gap-y-16 gap-x-1 justify-center items-center md:justify-between md:w-4/5 mt-6'
   id='gallery'
 >
   {
     gallery.map(({ src, width, height, alt }) => (
-      <div class='w-80'>
+      <div class={gallerypage ? 'sm:w-5/12 lg:w-2/12' : 'sm:w-5/12 lg:w-3/12'}>
         <a
           href={src}
           data-pswp-width={width ? width : 600}
