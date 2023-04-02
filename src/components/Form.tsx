@@ -7,9 +7,7 @@ export default function Form() {
   const honeypot: string = 'opacity-0 absolute top-0 left-0 h-0 w-0 z-0';
 
   async function handleSubmit(event: Event): Promise<void> {
-    console.log(event.target);
     event.preventDefault();
-    console.log(event.target);
     const formData = new FormData(event.target as HTMLFormElement);
     const response = await fetch('/mail', {
       method: 'POST',
@@ -43,7 +41,6 @@ export default function Form() {
         type='email'
         id='emailkjnfd'
         name='emailkjnfd'
-        required
         class='bg-black text-myYellow p-2'
       />
       <label for='textgkjfglk'>Message</label>

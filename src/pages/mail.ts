@@ -22,9 +22,9 @@ async function mail(name: string, email: string, text: string) {
   let info = await transporter.sendMail({
     from: mailUser,
     to: mailRecipient,
-    subject: `Hello from ${name} // ${email}`,
+    subject: `Hello from ${name} // ${email === '' ? 'no adress' : email}`,
     text: text,
-    html: `<b>${text}</b>`,
+    html: `<p>${text}</p>`,
   });
 
   return info;
@@ -41,10 +41,10 @@ export const post: APIRoute = async ({ request }) => {
   const honeyText = data.get('text') as string;
 
   if (honeyName || honeyEmail || honeyText) {
-    return new Response(null, { status: 500 });
+    return new Response(null, { status: 400 });
   }
 
-  if (name && email && text) {
+  if (name && text) {
     const resp = await mail(name, email, text).catch(console.error);
 
     if (resp) {
