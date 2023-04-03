@@ -6,6 +6,7 @@ module.exports = {
       fontFamily: {
         saira: ['"Saira Extra Condensed"'],
         sono: ['Sono'],
+        inconsolata: ['Inconsolata'],
       },
       colors: {
         myYellow: '#b1b70d',

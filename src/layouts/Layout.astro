@@ -7,7 +7,7 @@ const { title = 'not found' } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang='en'>
+<html lang='en' class='font-inconsolata text-myYellow bg-black'>
   <head>
     <meta charset='UTF-8' />
     <meta name='viewport' content='width=device-width' />
@@ -20,29 +20,9 @@ const { title = 'not found' } = Astro.props;
       href='https://fonts.googleapis.com/css2?family=Inconsolata&family=Saira+Extra+Condensed&family=Sono&display=swap'
       rel='stylesheet'
     />
-    <script defer src="/_vercel/insights/script.js"></script>
+    <script defer src='/_vercel/insights/script.js'></script>
   </head>
   <body class='px-4'>
     <slot />
   </body>
 </html>
-<style is:global>
-  :root {
-    --accent: 124, 58, 237;
-    --accent-gradient: linear-gradient(
-      45deg,
-      rgb(var(--accent)),
-      #da62c4 30%,
-      white 60%
-    );
-  }
-  html {
-    font-family: 'Inconsolata', monospace;
-    color: #b1b70d;
-    background-color: black;
-  }
-  h1 {
-    font-weight: 800;
-    margin: 0;
-  }
-</style>

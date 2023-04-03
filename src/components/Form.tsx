@@ -49,8 +49,8 @@ export default function Form() {
         name='textgkjfglk'
         rows={4}
         required
-        class='bg-black text-myYellow p-2'
-        placeholder='leave me a message'
+        class='bg-black text-myYellow p-2 placeholder:text-white placeholder:opacity-40'
+        placeholder='...leave me a message'
       />
 
       {/*Honeypot code*/}
