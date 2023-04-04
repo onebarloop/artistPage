@@ -156,14 +156,14 @@ export const SOCIAL = [
     icon: 'mdi:youtube',
     href: 'https://www.youtube.com/@alice_d',
   },
-  {
-    icon: 'opensea',
-    href: 'https://opensea.io/alice_died',
-  },
-  {
-    icon: 'cent',
-    href: 'https://alicedied.cent.co/',
-  },
+  // {
+  //   icon: 'opensea',
+  //   href: 'https://opensea.io/alice_died',
+  // },
+  // {
+  //   icon: 'cent',
+  //   href: 'https://alicedied.cent.co/',
+  // },
 ];
 
 export const TEXT = {

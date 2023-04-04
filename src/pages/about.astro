@@ -4,6 +4,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Form from '../components/Form';
 import { TEXT } from '../consts';
+import { Icon } from 'astro-icon';
 ---
 
 <Layout title='about'>
@@ -18,18 +19,42 @@ import { TEXT } from '../consts';
       <img alt='felix' src='/pics/felix.JPEG' class='md:w-60 w-full' />
     </article>
   </main>
-  <section class='flex flex-col-reverse md:flex-row md:gap-16'>
-    <Form client:load />
-    <article
-      class='flex flex-col items-center md:justify-center mt-8 md:mt-0 gap-4'
-    >
-      <p class='md:self-start text-2xl md:text-1xl'>Like my art?</p>
-      <p class='md:self-start'>Get in contact!</p>
-      <p class='text-2xl md:text-4xl'>
-        Leave me a message
-        <span class='md:text-8xl'>📮</span>
-      </p>
-    </article>
+  <section class='flex flex-col-reverse md:flex-row md:gap-16 mt-8'>
+    <div class='md:w-2/5 w-full'>
+      <h2 class='text-4xl mb-6 md:mb-12 mt-10 md:mt-2'>Contact me!</h2>
+      <Form client:load />
+    </div>
+
+    <div class='md:w-2/5 mt-10'>
+      <div class='h-0.5 md:mt-14 mb-8 bg-myYellow w-2/3'></div>
+      <div class='grid grid-cols-3 gap-4 gap-y-8 items-center'>
+        <a
+          href='https://www.kirschcollectibles.de/shop/fine-art-prints/alice-d.ied---fine-art-print---abstract-love/'
+          target='_blank'><Icon name='jck' class='fill-myYellow' /></a
+        >
+        <p class='col-span-2'>
+          You want to support emerging artists and love to wear unique designs?
+          I'd love if you check out www.kirschcollectibles.de a movement of
+          several artist who promote their work under one trademark. There you
+          find fine art prints, clothes and other cool artist.
+        </p>
+        <p class='col-span-2'>
+          Collect NFTs? Visit my profile at opensea, the largest NFT marketplace
+          on Ethereum chain.
+        </p>
+        <a href='https://opensea.io/alice_died' target='_blank'
+          ><Icon name='opensea' /></a
+        >
+        <a href='https://alicedied.cent.co/' target='_blank'
+          ><Icon name='cent' /></a
+        >
+        <p class='col-span-2'>
+          No Crypto-Wallet? No Problem! I also publish NFTs at CENT pages. Just
+          click the at the bottom of the page.
+        </p>
+      </div>
+      <div class='h-0.5 mt-8 bg-myYellow w-2/3 mr-0 ml-auto md:hidden'></div>
+    </div>
   </section>
 </Layout>
 
