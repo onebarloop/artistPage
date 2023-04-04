@@ -26,7 +26,7 @@ export default function Form() {
   return (
     <form
       onSubmit={handleSubmit}
-      class='md:w-2/5 font-sono bg-myYellow text-black font-bold mt-8 flex flex-col gap-2 p-4'
+      class=' font-sono bg-myYellow text-black font-bold flex flex-col gap-2 p-4'
     >
       <label for='namekjbvfd'>Name</label>
       <input
@@ -47,7 +47,7 @@ export default function Form() {
       <textarea
         id='textgkjfglk'
         name='textgkjfglk'
-        rows={4}
+        rows={8}
         required
         class='bg-black text-myYellow p-2 placeholder:text-white placeholder:opacity-40'
         placeholder='...leave me a message'
