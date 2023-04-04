@@ -26,31 +26,41 @@ import { Icon } from 'astro-icon';
     </div>
 
     <div class='md:w-2/5 mt-10'>
-      <div class='h-0.5 md:mt-14 mb-8 bg-myYellow w-2/3'></div>
-      <div class='grid grid-cols-3 gap-4 gap-y-8 items-center'>
+      <div class='flex flex-row justify-between items-center mb-8'>
+        <div class='h-0.5 bg-myYellow md:w-1/2 w-1/3'></div>
+        <p class='text-2xl font-bold'>
+          LINKS <span class='text-lg'>to my shops</span>
+        </p>
+      </div>
+
+      <div class='grid grid-cols-3 gap-x-4 gap-y-8 md:gap-y-0 items-center'>
         <a
           href='https://www.kirschcollectibles.de/shop/fine-art-prints/alice-d.ied---fine-art-print---abstract-love/'
-          target='_blank'><Icon name='jck' class='fill-myYellow' /></a
+          target='_blank'
+          ><Icon name='jck' class='fill-myYellow md:scale-75' /></a
         >
         <p class='col-span-2'>
           You want to support emerging artists and love to wear unique designs?
-          I'd love if you check out www.kirschcollectibles.de a movement of
-          several artist who promote their work under one trademark. There you
-          find fine art prints, clothes and other cool artist.
+          I'd love if you check out kirschcollectibles.de, a movement of several
+          artist who promote their work under one trademark. There you find fine
+          art prints, clothes and other cool artists.
         </p>
         <p class='col-span-2'>
           Collect NFTs? Visit my profile at opensea, the largest NFT marketplace
           on Ethereum chain.
         </p>
         <a href='https://opensea.io/alice_died' target='_blank'
-          ><Icon name='opensea' /></a
+          ><Icon
+            name='opensea'
+            class='fill-myYellow scale-150 md:scale-125'
+          /></a
         >
         <a href='https://alicedied.cent.co/' target='_blank'
-          ><Icon name='cent' /></a
+          ><Icon name='cent' class='scale-150 md:scale-125' /></a
         >
         <p class='col-span-2'>
           No Crypto-Wallet? No Problem! I also publish NFTs at CENT pages. Just
-          click the at the bottom of the page.
+          click the logo.
         </p>
       </div>
       <div class='h-0.5 mt-8 bg-myYellow w-2/3 mr-0 ml-auto md:hidden'></div>
