@@ -18,16 +18,16 @@ const gallery = gallerypage ? PICTURES : PICTURES.slice(-6);
 >
   {
     gallery.map(({ src, width, height, alt }) => (
-      <div class={gallerypage ? 'sm:w-5/12 lg:w-2/12' : 'sm:w-5/12 lg:w-3/12'}>
+      <div class={gallerypage ? 'sm:w-5/12 lg:w-2/12 relative' : 'sm:w-5/12 lg:w-3/12 relative'}>
         <a
           href={src}
           data-pswp-width={width ? width : 600}
           data-pswp-height={height ? height : 600}
-          class="relative"
+          
         >
-        <Icon name="ep:loading" class="absolute fill-myYellow -z-10 animate-spin-slow opacity-40 w-32 md:w-16 left-0 right-0 top-0 bottom-0 m-auto"  />
+        <Icon name="ep:loading" class="absolute fill-myYellow z-10 animate-spin-slow opacity-40 w-32 md:w-16 left-0 right-0 top-0 bottom-0 m-auto"  />
           <Image
-            class='object-cover hover:scale-110 hover:transition ease-in-out delay-100'
+            class=' hover:scale-110 hover:transition ease-in-out delay-100'
             src={src}
             alt={alt ? alt : 'an arty picture'}
             width={width ? width : 600}
