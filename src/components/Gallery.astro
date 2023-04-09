@@ -1,6 +1,7 @@
 ---
 import { PICTURES } from '../consts';
 import { Image } from '@astrojs/image/components';
+import { Icon } from 'astro-icon'
 
 export interface Props {
   gallerypage?: boolean;
@@ -22,7 +23,9 @@ const gallery = gallerypage ? PICTURES : PICTURES.slice(-6);
           href={src}
           data-pswp-width={width ? width : 600}
           data-pswp-height={height ? height : 600}
+          class="relative"
         >
+        <Icon name="mdi-light:loading" class="absolute fill-myYellow -z-10 animate-spin-slow opacity-40 "  />
           <Image
             class='object-cover hover:scale-110 hover:transition ease-in-out delay-100'
             src={src}
