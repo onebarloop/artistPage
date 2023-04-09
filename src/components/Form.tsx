@@ -4,6 +4,7 @@ export default function Form() {
   const [responseMessage, setResponseMessage] = useState<string>('');
   const [msgSent, setMsgSent] = useState<boolean>(false);
 
+  // Honeypot Tailwind-Styling
   const honeypot: string = 'opacity-0 absolute top-0 left-0 h-0 w-0 z-0';
 
   async function handleSubmit(event: Event): Promise<void> {
@@ -19,7 +20,7 @@ export default function Form() {
       setResponseMessage(data.message);
       if (response.ok) {
         setMsgSent(true);
-      }
+      } 
     }
   }
 
