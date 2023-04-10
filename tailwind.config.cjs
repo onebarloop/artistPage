@@ -4,7 +4,6 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        saira: ['"Saira Extra Condensed"'],
         sono: ['Sono'],
         inconsolata: ['Inconsolata'],
       },
@@ -16,7 +15,7 @@ module.exports = {
       },
       animation: {
         'spin-slow': 'spin 3s linear infinite',
-      }
+      },
     },
   },
   plugins: [],

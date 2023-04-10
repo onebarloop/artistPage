@@ -1,4 +1,6 @@
 ---
+import '@fontsource/sono';
+import '@fontsource/inconsolata';
 export interface Props {
   title?: string;
 }
@@ -7,21 +9,15 @@ const { title = 'not found' } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang='en' class='font-inconsolata text-myYellow bg-black'>
+<html lang="en" class="font-inconsolata text-myYellow bg-black">
   <head>
-    <meta charset='UTF-8' />
-    <meta name='viewport' content='width=device-width' />
-    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
-    <meta name='generator' content={Astro.generator} />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    <link rel='preconnect' href='https://fonts.googleapis.com' />
-    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
-    <link
-      href='https://fonts.googleapis.com/css2?family=Inconsolata&family=Saira+Extra+Condensed&family=Sono&display=swap'
-      rel='stylesheet'
-    />
   </head>
-  <body class='px-4'>
+  <body class="px-4">
     <slot />
   </body>
 </html>
