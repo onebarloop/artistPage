@@ -1,7 +1,7 @@
 ---
 import { PICTURES } from '../consts';
 import { Image } from '@astrojs/image/components';
-import { Icon } from 'astro-icon'
+import { Icon } from 'astro-icon';
 
 export interface Props {
   gallerypage?: boolean;
@@ -13,26 +13,34 @@ const gallery = gallerypage ? PICTURES : PICTURES.slice(-6);
 ---
 
 <section
-  class='flex flex-wrap gap-y-8 md:gap-y-16 gap-x-1 justify-center items-center md:justify-between md:w-4/5 mt-6'
-  id='gallery'
+  class="mt-6 flex flex-wrap items-center justify-center gap-y-8 gap-x-1 md:w-4/5 md:justify-between md:gap-y-16"
+  id="gallery"
 >
   {
     gallery.map(({ src, width, height, alt }) => (
-      <div class={gallerypage ? 'sm:w-5/12 lg:w-2/12 relative' : 'sm:w-5/12 lg:w-3/12 relative'}>
+      <div
+        class={
+          gallerypage
+            ? 'relative sm:w-5/12 lg:w-2/12'
+            : 'relative sm:w-5/12 lg:w-3/12'
+        }
+      >
         <a
           href={src}
           data-pswp-width={width ? width : 600}
           data-pswp-height={height ? height : 600}
-          
         >
-        <Icon name="ep:loading" class="absolute fill-myYellow -z-10 animate-spin-slow opacity-40 w-32 md:w-16 left-0 right-0 top-0 bottom-0 m-auto"  />
+          <Icon
+            name="ep:loading"
+            class="absolute left-0 right-0 top-0 bottom-0 -z-10 m-auto w-32 animate-spin-slow fill-myYellow opacity-40 md:w-16"
+          />
           <Image
-            class=' hover:scale-110 hover:transition ease-in-out delay-100'
+            class=" delay-100 ease-in-out hover:scale-110 hover:transition"
             src={src}
             alt={alt ? alt : 'an arty picture'}
             width={width ? width : 600}
             height={height ? height : 600}
-            format='webp'
+            format="webp"
           />
         </a>
       </div>

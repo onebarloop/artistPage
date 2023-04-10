@@ -20,82 +20,82 @@ export default function Form() {
       setResponseMessage(data.message);
       if (response.ok) {
         setMsgSent(true);
-      } 
+      }
     }
   }
 
   return (
     <form
       onSubmit={handleSubmit}
-      class=' font-sono bg-myYellow text-black font-bold flex flex-col gap-2 p-4'
+      class=" flex flex-col gap-2 bg-myYellow p-4 font-sono font-bold text-black"
     >
-      <label for='namekjbvfd'>Name</label>
+      <label for="namekjbvfd">Name</label>
       <input
-        type='text'
-        id='namekjbvfd'
-        name='namekjbvfd'
+        type="text"
+        id="namekjbvfd"
+        name="namekjbvfd"
         required
-        class='bg-black text-myYellow p-2'
+        class="bg-black p-2 text-myYellow"
       />
-      <label for='emailkjnfd'>Email</label>
+      <label for="emailkjnfd">Email</label>
       <input
-        type='email'
-        id='emailkjnfd'
-        name='emailkjnfd'
-        class='bg-black text-myYellow p-2'
+        type="email"
+        id="emailkjnfd"
+        name="emailkjnfd"
+        class="bg-black p-2 text-myYellow"
       />
-      <label for='textgkjfglk'>Message</label>
+      <label for="textgkjfglk">Message</label>
       <textarea
-        id='textgkjfglk'
-        name='textgkjfglk'
+        id="textgkjfglk"
+        name="textgkjfglk"
         rows={8}
         required
-        class='bg-black text-myYellow p-2 placeholder:text-white placeholder:opacity-40'
-        placeholder='...leave me a message'
+        class="bg-black p-2 text-myYellow placeholder:text-white placeholder:opacity-40"
+        placeholder="...leave me a message"
       />
 
       {/*Honeypot code*/}
 
-      <label for='name' class={honeypot}></label>
+      <label for="name" class={honeypot}></label>
       <input
-        type='text'
-        id='name'
-        name='name'
+        type="text"
+        id="name"
+        name="name"
         class={honeypot}
-        autocomplete='nope'
+        autocomplete="nope"
       />
-      <label for='email' class={honeypot}></label>
+      <label for="email" class={honeypot}></label>
       <input
-        type='email'
-        id='email'
-        name='email'
+        type="email"
+        id="email"
+        name="email"
         class={honeypot}
-        autocomplete='nope'
+        autocomplete="nope"
       />
-      <label for='text' class={honeypot}></label>
+      <label for="text" class={honeypot}></label>
       <textarea
-        id='text'
-        name='text'
+        id="text"
+        name="text"
         rows={4}
         class={honeypot}
-        placeholder='leave me a message'
-        autocomplete='nope'
+        placeholder="leave me a message"
+        autocomplete="nope"
       />
 
       {/*Honeypot code*/}
 
       {msgSent ? (
         <button
-          type='submit'
+          type="submit"
           disabled
-          class='bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow opacity-60 active:scale-95 hover:opacity-70  transition ease-in-out mt-2'
+          class="mt-2 rounded border border-gray-400 bg-white py-2 px-4 font-semibold text-gray-800 opacity-60 shadow transition ease-in-out  hover:bg-gray-100 hover:opacity-70 active:scale-95"
         >
           {responseMessage}
         </button>
       ) : (
         <button
-          type='submit'
-          class='bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow opacity-60 active:scale-95 hover:opacity-70  transition ease-in-out mt-2'
+          type="submit"
+          class="mt-2 rounded border border-gray-400 bg-white py-2 px-4 font-semibold text-gray-800 opacity-60 shadow transition ease-in-out  hover:bg-gray-100 hover:opacity-70 active:scale-95"
         >
           Send
         </button>

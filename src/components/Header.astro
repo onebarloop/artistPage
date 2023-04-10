@@ -9,20 +9,20 @@ const { path } = Astro.props;
 ---
 
 <header
-  class='flex flex-col md:flex-row justify-between xl:w-4/5 relative h-32'
+  class="relative flex h-32 flex-col justify-between md:flex-row xl:w-4/5"
 >
-  <h1 class='text-2xl small:text-4xl md:text-6xl lg:text-8xl pt-1 font-bold'>
-    alice_d.ied<p class='text-base small:text-2xl md:text-4xl font-normal'>
+  <h1 class="pt-1 text-2xl font-bold small:text-4xl md:text-6xl lg:text-8xl">
+    alice_d.ied<p class="text-base font-normal small:text-2xl md:text-4xl">
       {path}
     </p>
   </h1>
 
   <ul
-    class='flex flex-col self-end md:self-auto md:flex-row md:gap-4 m-0 md:mt-4 text-2xl absolute right-0'
+    class="absolute right-0 m-0 flex flex-col self-end text-2xl md:mt-4 md:flex-row md:gap-4 md:self-auto"
   >
     {
       MENU.map(({ name, href }) => (
-        <li class='self-start p-1 hover:bg-myYellow hover:text-black transition ease-in-out delay-100 '>
+        <li class="self-start p-1 transition delay-100 ease-in-out hover:bg-myYellow hover:text-black ">
           <a href={href}>{name}</a>
         </li>
       ))
