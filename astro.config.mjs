@@ -21,7 +21,7 @@ export default defineConfig({
   vite: {
     define: {
       'import.meta.env.VERCEL_ANALYTICS_ID': JSON.stringify(
-        process.env.VERCEL_ANALYTICS_ID
+        process.env.PUBLIC_VERCEL_ANALYTICS_ID
       ),
     },
   },
