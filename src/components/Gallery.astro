@@ -9,7 +9,11 @@ export interface Props {
 
 const { gallerypage } = Astro.props;
 
-const gallery = gallerypage ? PICTURES : PICTURES.slice(-6);
+const gallery = gallerypage
+  ? PICTURES.slice().reverse()
+  : PICTURES.slice()
+      .sort(() => Math.random() - Math.random())
+      .slice(-6);
 ---
 
 <section
@@ -32,7 +36,7 @@ const gallery = gallerypage ? PICTURES : PICTURES.slice(-6);
         >
           <Icon
             name="ep:loading"
-            class="absolute left-0 right-0 top-0 bottom-0 -z-10 m-auto w-32 animate-spin-slow fill-myYellow opacity-40 md:w-16"
+            class="animate-spin-slow fill-myYellow absolute bottom-0 left-0 right-0 top-0 -z-10 m-auto w-32 opacity-40 md:w-16"
           />
           <Image
             class=" delay-100 ease-in-out hover:scale-110 hover:transition"
