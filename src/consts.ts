@@ -156,6 +156,36 @@ export const PICTURES: Picture[] = [
     height: 600,
     alt: 'art!',
   },
+  {
+    src: '/pics/28.JPEG',
+    width: 600,
+    height: 600,
+    alt: 'art!',
+  },
+  {
+    src: '/pics/29.JPEG',
+    width: 600,
+    height: 600,
+    alt: 'art!',
+  },
+  {
+    src: '/pics/30.JPEG',
+    width: 600,
+    height: 600,
+    alt: 'art!',
+  },
+  {
+    src: '/pics/31.JPEG',
+    width: 600,
+    height: 600,
+    alt: 'art!',
+  },
+  {
+    src: '/pics/32.JPEG',
+    width: 600,
+    height: 600,
+    alt: 'art!',
+  },
 ];
 
 export const MENU = [
