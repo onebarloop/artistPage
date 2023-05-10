@@ -7,12 +7,6 @@ interface Picture {
 
 export const PICTURES: Picture[] = [
   {
-    src: '/pics/1.JPEG',
-    width: 600,
-    height: 600,
-    alt: 'art!',
-  },
-  {
     src: '/pics/2.JPEG',
     width: 600,
     height: 600,
