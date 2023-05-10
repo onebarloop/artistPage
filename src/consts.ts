@@ -115,7 +115,13 @@ export const PICTURES: Picture[] = [
     alt: 'art!',
   },
   {
-    src: '/pics/20.JPEG',
+    src: '/pics/21.JPEG',
+    width: 600,
+    height: 600,
+    alt: 'art!',
+  },
+  {
+    src: '/pics/22.JPEG',
     width: 600,
     height: 600,
     alt: 'art!',
