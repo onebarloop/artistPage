@@ -11,12 +11,24 @@ import { Icon } from 'astro-icon';
   <Header path="/about" />
   <div class="mb-6 h-0.5 w-2/3 bg-myYellow md:mt-12"></div>
   <main class="md:mt-8">
-    <article class="flex flex-wrap items-start gap-8 md:flex-nowrap xl:w-4/5">
+    <article class="grid grid-cols-1 gap-8 xl:w-4/5 xl:grid-cols-12">
       <p
-        class="bg-myYellow p-4 font-sono text-black"
+        class="bg-myYellow p-4 font-sono text-black xl:col-span-9"
         set:html={TEXT.aboutText}
       />
-      <img alt="felix" src="/pics/felix.JPEG" class="w-full md:w-60" />
+      <div class="flex flex-col gap-2 xl:col-span-3">
+        <img alt="felix" src="/pics/felix.JPEG" />
+        <a
+          href="https://oncyber.io/intoxicated_wonderland"
+          class="flex flex-col justify-center p-2 hover:bg-myYellow hover:bg-opacity-40"
+        >
+          <Icon height="60" fill="#b1b70d" name="oncyber" />
+          <p>
+            explore my NFTs in web 3.0 in my OncCyber 3D world „intoxicated
+            wonderland"
+          </p>
+        </a>
+      </div>
     </article>
   </main>
   <section class="mt-8 flex flex-col-reverse md:flex-row md:gap-16">
@@ -28,9 +40,7 @@ import { Icon } from 'astro-icon';
     <div class="mt-10 md:w-2/5">
       <div class="mb-8 flex flex-row items-center justify-between">
         <div class="h-0.5 w-1/3 bg-myYellow md:w-1/2"></div>
-        <p class="text-3xl font-bold">
-          Collections
-        </p>
+        <p class="text-3xl font-bold">Collections</p>
       </div>
 
       <div class="grid grid-cols-3 items-center gap-x-4 gap-y-8">
@@ -48,12 +58,17 @@ import { Icon } from 'astro-icon';
           No Crypto-Wallet? No Problem! I also publish NFTs at CENT pages. Just
           click the logo.
         </p>
-    
+
         <p class="col-span-2 md:text-xl">
-          Collect unique digital art <br/> as NFTs at makersplace.
+          Collect unique digital art <br /> as NFTs at makersplace.
         </p>
-      <a href="https://makersplace.com/alice_died/" target="_blank">
-        <Icon name="makersplace" class="scale-125" style="filter: invert(59%) sepia(96%) saturate(494%) hue-rotate(20deg) brightness(97%) contrast(90%)" /></a>
+        <a href="https://makersplace.com/alice_died/" target="_blank">
+          <Icon
+            name="makersplace"
+            class="scale-125"
+            style="filter: invert(59%) sepia(96%) saturate(494%) hue-rotate(20deg) brightness(97%) contrast(90%)"
+          /></a
+        >
       </div>
       <div class="ml-auto mr-0 mt-8 h-0.5 w-2/3 bg-myYellow md:hidden"></div>
     </div>
@@ -61,7 +76,3 @@ import { Icon } from 'astro-icon';
 </Layout>
 
 <Footer />
-
-
-
-
